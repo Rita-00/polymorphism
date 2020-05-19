@@ -188,7 +188,7 @@ int main() {
 
   Order order;
 
-  cout << "Выберите пиццу" << endl;
+  cout << "Введите номер выбранной пиццы" << endl;
   int choice;
   unsigned int size, salt, cheese;
   cin >> choice;
@@ -216,6 +216,9 @@ int main() {
       order.add(new Classic(size, salt, cheese));
       break;
     }
+    cout << "Введите номер выбранной пиццы или введите 0, если больше ничего "
+            "не хотите"
+         << endl;
     cin >> choice;
   };
   order.print();
